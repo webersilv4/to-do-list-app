@@ -26,6 +26,8 @@ routes.use(express_1.default.urlencoded({ extended: false }));
 */
 routes.get('/api/v1/list-all-tasks/:userId', tasks_1.listAllTasks);
 routes.post('/api/v1/create-task', tasks_1.createTask);
+routes.delete('/api/v1/delete-one-task', tasks_1.deleteOneTask);
+routes.put('/api/v1/complete-one-task', tasks_1.completeOneTask);
 /*
 *   Exportando Para server.ts
 */

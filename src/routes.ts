@@ -7,7 +7,7 @@ import cors from 'cors';
 
 dotenv.config();
 
-import { createTask, listAllTasks } from './app/tasks';
+import { completeOneTask, createTask, deleteOneTask, listAllTasks } from './app/tasks';
 
 /* 
 *   Chamando Função de rotas
@@ -28,6 +28,8 @@ routes.use(express.urlencoded({ extended: false }));
 */
 routes.get('/api/v1/list-all-tasks/:userId', listAllTasks);
 routes.post('/api/v1/create-task', createTask);
+routes.delete('/api/v1/delete-one-task', deleteOneTask);
+routes.put('/api/v1/complete-one-task', completeOneTask);
 
 
 /* 
